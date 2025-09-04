@@ -1,0 +1,114 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f8e1c4, #f0d9b5);
+  text-align: center;
+  color: #4b2e05;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cup */
+.chai-cup {
+  position: relative;
+  width: 120px;
+  height: 150px;
+  background: #8b4513;
+  border-radius: 0 0 60px 60px;
+  margin-bottom: 20px;
+}
+
+.cup {
+  position: absolute;
+  top: -15px;
+  left: -10px;
+  width: 140px;
+  height: 30px;
+  background: #8b4513;
+  border-radius: 50%;
+}
+
+/* Steam Animation */
+.steam {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 20px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  animation: rise 3s infinite ease-in-out;
+}
+
+.steam1 {
+  left: 40%;
+  animation-delay: 0s;
+}
+.steam2 {
+  left: 50%;
+  animation-delay: 1s;
+}
+.steam3 {
+  left: 60%;
+  animation-delay: 2s;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-50px) scale(1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-100px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* Tagline */
+.tagline {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Button */
+.btn {
+  padding: 12px 25px;
+  background: #d2691e;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background: #b85c1e;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
